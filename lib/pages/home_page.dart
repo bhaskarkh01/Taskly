@@ -18,13 +18,35 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: _deviceHeight * 0.1,
-        title: Text(
+        title: const Text(
           "Taskly!",
           style: TextStyle(
             fontSize: 25,
           ),
         ),
       ),
+      body: _tasksList(),
+    );
+  }
+
+  Widget _tasksList() {
+    return ListView(
+      children: [
+        ListTile(
+          title: const Text(
+            "Buy Pizza",
+            style: TextStyle(
+              fontSize: 20,
+              decoration: TextDecoration.lineThrough,
+            ),
+          ),
+          subtitle: Text(DateTime.now().toString()),
+          trailing: const Icon(
+            Icons.check_circle_outline,
+            color: Colors.red,
+          ),
+        ),
+      ],
     );
   }
 }
