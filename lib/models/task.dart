@@ -13,7 +13,7 @@ class Task {
     return Task(
       content: task["content"],
       timestamp: task["timestamp"],
-      done: task["done"],
+      done: task["done"], 
     );
   }
 
